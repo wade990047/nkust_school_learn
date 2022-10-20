@@ -37,4 +37,4 @@ while not quit:
     elif res == "5":
         quit = True
     else:
-        print("I can't recognize your command! test")
+        print("I can't recognize your command!")
