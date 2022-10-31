@@ -1,0 +1,6 @@
+name, height, weight
+Ruby, 1.56, 50
+Tom, 1.88, 72
+Tommy, 1.65, 65
+Chris, 1.72, 62
+Jane, 1.67, 50
