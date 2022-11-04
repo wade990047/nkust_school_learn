@@ -1,5 +1,17 @@
 import random
 
+def scores(a,score):
+  cards_half = 0.5
+  if a >= 11:
+      score = score + cards_half
+  else:
+      score = score + a
+  return score
+def say(a,b):
+  print("\n你的手牌是:",a)
+  print("你的分數是:",b)
+
+
 #建立一個card_face串列，用來放所有牌面的花色，以下總共52個項目（每個花色各13個）
 card_face = ["Diamond"]*13 + ["Spade"]*13 + ["Heart"] * 13 + ["Club"] * 13
 
@@ -17,27 +29,23 @@ player_cards = list()
 
 #把deck串列中的最後1張牌pop出來，放到player_cards串列中
 player_cards.append(deck.pop())
-cards_half = 0.5
-print("你的手牌是:", player_cards)
+
+scoreout = 0
+i = 0
+num = player_cards[i][1]
+scoreout = scores(num,scoreout)
+say(player_cards,scoreout)
 answer = input("請問你要補牌嗎?(Y/N):").lower()
 replay = "y"
-score = player_cards[0][1]
-i = 1
-while answer != "n" or replay != "n":
+
+while answer != "n" and replay != "n":
   player_cards.append(deck.pop())
-  cards = len(player_cards)
-  if player_cards[i][1] >= 11:
-      print(player_cards[i][1])
-      score = score + cards_half
-      print(score)
-  else:
-      score = score + player_cards[i][1]
-      print(score)
   i = i + 1
-  if score >= 10.5:
-    print("你的分數爆掉了")
-    print("你的手牌是:",player_cards)
-    print("你的分數是:",score)
+  num = player_cards[i][1]
+  scoreout = scores(num,scoreout)
+  if scoreout > 10.5:
+    print("\n你的分數爆掉了")
+    say(player_cards,scoreout)
     print()
     replay = input("是否再玩一次?(Y/N):").lower()
     if replay == "y":
@@ -46,21 +54,20 @@ while answer != "n" or replay != "n":
       deck = [item for item in zip(card_face, card_value)]
       random.shuffle(deck)
       player_cards = []
+
+      scoreout = 0
+      i = 0
       player_cards.append(deck.pop())
-      print("你的手牌是:", player_cards)
+      num = player_cards[i][1]
+      scoreout = scores(num,scoreout)
+      say(player_cards,scoreout)
       answer = input("請問你要補牌嗎?(Y/N):").lower()
-      score = player_cards[0][1]
-      i = 1
     else:
       break
   else:
-    print("你的手牌是:",player_cards)
+    say(player_cards,scoreout)
     answer = input("請問你要補牌嗎?(Y/N):").lower()
     if answer == "n":
-      print("你的手牌是:",player_cards)
-      print("你的分數是:",score)
+      say(player_cards,scoreout)
       break
-  #在這裡面寫把牌加到player_cards串列中的程式
-  #同時也要判斷，如果在補完牌之後，玩家的分數爆了，就要立即中斷程式
-  #以下要寫，當玩家決定不加牌或是牌分數爆掉之後，要印出玩家的分數，以及他得到的牌
-  #並詢問玩家是否要再玩一次。
+say(player_cards,scoreout)
