@@ -16,17 +16,19 @@ def setup():
   deck = [item for item in zip(card_face, card_value)]
   random.shuffle(deck)
   return deck
+def start():
+  deck = setup()
+  player_cards = []
+  player_cards.append(deck.pop())
+  scoreout = 0
+  i = 0
+  num = player_cards[i][1]
+  scoreout = scores(num,scoreout)
+  say(player_cards,scoreout)
+  answer = input("請問你要補牌嗎?(Y/N):").lower()
+  return deck,player_cards,scoreout,i,num,answer
 
-deck = setup()
-player_cards = []
-player_cards.append(deck.pop())
-
-scoreout = 0
-i = 0
-num = player_cards[i][1]
-scoreout = scores(num,scoreout)
-say(player_cards,scoreout)
-answer = input("請問你要補牌嗎?(Y/N):").lower()
+deck,player_cards,scoreout,i,num,answer = start()
 replay = "y"
 
 while answer != "n" and replay != "n":
@@ -36,17 +38,10 @@ while answer != "n" and replay != "n":
   scoreout = scores(num,scoreout)
   if scoreout == 10.5:
     print("您贏了! 恭喜您剛好獲得10.5點")
+    say(player_cards,scoreout)
     replay = input("是否再玩一次?(Y/N):").lower()
     if replay == "y":
-      deck = setup()
-      player_cards = []
-      scoreout = 0
-      i = 0
-      player_cards.append(deck.pop())
-      num = player_cards[i][1]
-      scoreout = scores(num,scoreout)
-      say(player_cards,scoreout)
-      answer = input("請問你要補牌嗎?(Y/N):").lower()
+      deck,player_cards,scoreout,i,num,answer = start()
     else:
       break
   elif scoreout > 10.5:
@@ -54,15 +49,7 @@ while answer != "n" and replay != "n":
     say(player_cards,scoreout)
     replay = input("是否再玩一次?(Y/N):").lower()
     if replay == "y":
-      deck = setup()
-      player_cards = []
-      scoreout = 0
-      i = 0
-      player_cards.append(deck.pop())
-      num = player_cards[i][1]
-      scoreout = scores(num,scoreout)
-      say(player_cards,scoreout)
-      answer = input("請問你要補牌嗎?(Y/N):").lower()
+      deck,player_cards,scoreout,i,num,answer = start()
     else:
       break
   else:
@@ -70,5 +57,9 @@ while answer != "n" and replay != "n":
     answer = input("請問你要補牌嗎?(Y/N):").lower()
     if answer == "n":
       say(player_cards,scoreout)
-      break
+      replay = input("是否再玩一次?(Y/N):").lower()
+      if replay == "y":
+        deck,player_cards,scoreout,i,num,answer = start()
+      else:
+        break
 say(player_cards,scoreout)
