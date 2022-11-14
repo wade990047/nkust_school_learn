@@ -22,16 +22,18 @@ for i in range(num_players):
     phand.append(pcards)
 for i in range(num_players):
     score = 0
+    a = 0
     for j in range(0,3):
         if phand[i][j][1] > 10:
             score = score + 10
         elif phand[i][j][1] == 1:
-            if score+10 > 21:
-                score = score + 1
-            else:
-                score = score + 10
+            score = score + 1
+            a = a + 1
         else:
             score = score + int(phand[i][j][1])
+    for j in range(0,a+1):
+        if score + 10 <= 21:
+          score = score + 10
     if score > 21:
         print("Player #{}'s points is bust!".format(i+1))
         score = 0
