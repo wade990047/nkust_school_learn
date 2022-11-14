@@ -10,8 +10,14 @@ sel = "#pageptlist > div > div > div > div.d-txt > div.mtitle > a"
 soup = BeautifulSoup(html, "lxml")
 target = soup.select(sel)
 fp = open("C111196121-news.txt", "w", encoding="utf-8")
-title = []
+target_urls = []
 for i in target:
     #print(i.text.strip())
-    title.append(i.text.strip())
     fp.write(i.text.strip()+"\n")
+fp.close()
+urls = "https://www.nkust.edu.tw/p/403-1000-1363-{}.php?Lang=zh-tw"
+for page in range(1,52):
+    url = urls.format(page)
+    target_urls.append(urls)
+for url in target_urls:
+    print(url)
