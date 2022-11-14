@@ -32,8 +32,8 @@ for i in range(num_players):
         else:
             score = score + int(phand[i][j][1])
     for j in range(0,a+1):
-        if score + 10 <= 21:
-          score = score + 10
+        if score +10 <= 21:
+          score = score +10
     if score > 21:
         print("Player #{}'s points is bust!".format(i+1))
         score = 0
