@@ -1,6 +1,7 @@
 #pip install requests
 #pip install bs4
 #pip install lxml
+#pip install jupyter
 import requests
 from bs4 import BeautifulSoup
 url = "https://www.nkust.edu.tw/p/403-1000-1363-1.php?Lang=zh-tw"
