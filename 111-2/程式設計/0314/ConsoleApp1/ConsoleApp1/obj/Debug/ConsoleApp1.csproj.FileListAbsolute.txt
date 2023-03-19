@@ -1,0 +1,8 @@
+C:\Users\a1229\Desktop\程式學習\school\nkust_school_learn\111-2\程式設計\0314\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe.config
+C:\Users\a1229\Desktop\程式學習\school\nkust_school_learn\111-2\程式設計\0314\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.exe
+C:\Users\a1229\Desktop\程式學習\school\nkust_school_learn\111-2\程式設計\0314\ConsoleApp1\ConsoleApp1\bin\Debug\ConsoleApp1.pdb
+C:\Users\a1229\Desktop\程式學習\school\nkust_school_learn\111-2\程式設計\0314\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.AssemblyReference.cache
+C:\Users\a1229\Desktop\程式學習\school\nkust_school_learn\111-2\程式設計\0314\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.SuggestedBindingRedirects.cache
+C:\Users\a1229\Desktop\程式學習\school\nkust_school_learn\111-2\程式設計\0314\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.csproj.CoreCompileInputs.cache
+C:\Users\a1229\Desktop\程式學習\school\nkust_school_learn\111-2\程式設計\0314\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.exe
+C:\Users\a1229\Desktop\程式學習\school\nkust_school_learn\111-2\程式設計\0314\ConsoleApp1\ConsoleApp1\obj\Debug\ConsoleApp1.pdb
