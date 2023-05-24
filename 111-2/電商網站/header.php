@@ -26,6 +26,8 @@
                         <li><a class="dropdown-item" href="bmi.php">BMI計算</a></li>
                         <li><a class="dropdown-item" href="lotto.php">樂透預測</a></li>
                         <li><a class="dropdown-item" href="bodyinfo.php">健康管理</a></li>
+                        <li><a class="dropdown-item" href="tv.php">電視選台器</a></li>
+                        <li><a class="dropdown-item" href="tvinfo.php">電視頻道管理</a></li>
                     </ul>
                 <?php
                     if ($_SESSION["user"] != "administrator") {
