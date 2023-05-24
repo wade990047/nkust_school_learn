@@ -27,9 +27,9 @@ if ($conn->connect_error) {
     echo "<tr><td>編號</td><td>名稱</td><td>Token</td></tr>";
     while ($row = $result->fetch_assoc()) {
       echo "<tr>";
-      echo "<td>" . $row["id"] . "</td>" .
-        "<td>" . $row["name"] . "</td>" .
-        "<td>" . $row["token"] . "</td>" .
+      echo "<td><p style=\"color:#0062ad;\">" . $row["id"] . "</p></td>" .
+        "<td><p style=\"color:#0062ad;\">" . $row["name"] . "</p></td>" .
+        "<td><p style=\"color:#0062ad;\">" . $row["token"] . "</p></td>" .
         "<td><a href='deltv.php?id="
         . $row["id"] . "' class='btn btn-outline-danger btn-sm'>刪除</a></td>" .
         "</tr>";

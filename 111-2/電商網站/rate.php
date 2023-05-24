@@ -1,10 +1,10 @@
 <?php include "bootstrap.php" ?>
-<title>匯率換算</title>
+<title>貨幣匯率換算</title>
 </head>
 
 <body>
     <div class="container">
-        <h1>匯率換算</h1>
+        <h1>貨幣匯率換算</h1>
         <?php include "header.php"; ?>
         <form action="rate.php" method=POST>
             新台幣：<input type=text size=10 name=ntd>元

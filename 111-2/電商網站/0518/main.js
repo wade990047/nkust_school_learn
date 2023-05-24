@@ -25,3 +25,17 @@ function changeTV() {
     document.getElementById("tvtitle").innerHTML = tvText;
     document.getElementById("tvdisplay").innerHTML = tvstr;
 }
+
+function clockTick() {
+    var currentTime = new Date(),
+        month = currentTime.getMonth() + 1,
+        day = currentTime.getDate(),
+        year = currentTime.getFullYear(),
+        hours = currentTime.getHours(),
+        minutes = currentTime.getMinutes(),
+        seconds = currentTime.getSeconds(),
+        text = (year + "/" + month + "/" + day + ' ' + hours + ':' + minutes + ':' + seconds);
+    // here we get the element with the id of "date" and change the content to the text variable we made above
+    document.getElementById('date').innerHTML = text;
+  }
+setInterval(clockTick, 1000);

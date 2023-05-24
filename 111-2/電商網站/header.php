@@ -1,6 +1,14 @@
 <?php 
   session_start();
 ?>
+<style>
+    body {
+        background-image: url('background.png');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+</style>
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">選單</a>
@@ -10,28 +18,25 @@
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="index.php">首頁</a>
+                    <a class="nav-link active" aria-current="page" href="/school/">首頁</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="https://ccet.nkust.edu.tw/">不分系</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="rate.php">匯率換算</a>
+                    <a class="nav-link" href="rate.php">貨幣匯率換算</a>
                 </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        所有功能
+                        功能列表
                     </a>
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="bmi.php">BMI計算</a></li>
-                        <li><a class="dropdown-item" href="lotto.php">樂透預測</a></li>
-                        <li><a class="dropdown-item" href="bodyinfo.php">健康管理</a></li>
-<<<<<<< HEAD
+                        <li><a class="dropdown-item" href="lotto.php">樂透號碼預測</a></li>
+                        <li><a class="dropdown-item" href="bodyinfo.php">健康資料管理</a></li>
                         <li><a class="dropdown-item" href="tv.php">電視選台器</a></li>
                         <li><a class="dropdown-item" href="tvinfo.php">電視頻道管理</a></li>
-=======
-                        <li><a class="dropdown-item" href="js-example/index.html">JS練習</a></li>
->>>>>>> 219d9cb2ae5d3d1abab2eab1b6b3c093931f7320
+                        <li><a class="dropdown-item" href="0518/index.html">Java Script練習</a></li>
                     </ul>
                 <?php
                     if ($_SESSION["user"] != "administrator") {
