@@ -15,7 +15,7 @@
 
 <body>
     <div class="container">
-        <h1>Welcome to my website!</h1>
+        <h1>歡迎來到我的網站!</h1>
         <?php include "header.php"; ?>
         <p>點擊上面的選項，執行更多的功能！</p>
         <?php
